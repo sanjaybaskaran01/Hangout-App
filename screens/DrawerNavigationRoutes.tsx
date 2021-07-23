@@ -4,6 +4,8 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import { SafeAreaView, StyleSheet,StatusBar } from "react-native";
 import Friends from "./TabScreens/Friends";
 import Plans from "./TabScreens/Plans";
+import Profile from "./DrawerScreens/Profile";
+import Settings from "./DrawerScreens/Settings";
 
 const Tab = createMaterialTopTabNavigator();
 const Drawer = createDrawerNavigator();
@@ -22,7 +24,9 @@ const DrawerNavigationRoutes = () => {
   return (
     <SafeAreaView style={styles.SafeArea}>
       <Drawer.Navigator>
-        <Drawer.Screen name="Home" component={HomeScreen} />
+      <Drawer.Screen name="Home" component={HomeScreen} />
+      <Drawer.Screen name="My Profile" component={Profile} />
+      <Drawer.Screen name="Settings" component={Settings} />
       </Drawer.Navigator>
       </SafeAreaView>
   );
